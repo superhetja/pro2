@@ -41,5 +41,5 @@ function printBoard(board, sudokuid) {
 };
 
 // defult board easy: [[],[],[],[],[],[],[],[],[]]
-//defult board medium: [[],[],[],[],[],[],[],[],[]]
-//defult board hard: [[],[],[],[],[],[],[],[],[]]
+// defult board medium: [[],[],[],[],[],[],[],[],[]]
+// defult board hard: [[],[],[],[],[],[],[],[],[]]
