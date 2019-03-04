@@ -22,7 +22,7 @@ function doAjax() {
         })
 };
 
-function printBoard(board) {
+function printBoard(board, sudokuid) {
     var i, n, line, name;
     for (i=0; i < board.length; i++) {
         for (n=0; n < board[i].length; n++) {
@@ -32,11 +32,11 @@ function printBoard(board) {
                 document.getElementById(name).innerText = board[i][n];
             } else {
                 document.getElementById(name).className = "input_field";
-                document.getElementById(name).innerText = "x";
             }
             
         }
     }
+    document.getElementById("sudoku_id").innerText = sudokuid
     //document.getElementById('board').innerText = board
 };
 
