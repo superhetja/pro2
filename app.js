@@ -44,5 +44,5 @@ function validateBoard(){
 };
 
 // defult board easy: [[],[],[],[],[],[],[],[],[]]
-//defult board medium: [[],[],[],[],[],[],[],[],[]]
-//defult board hard: [[],[],[],[],[],[],[],[],[]]
+// defult board medium: [[],[],[],[],[],[],[],[],[]]
+// defult board hard: [[],[],[],[],[],[],[],[],[]]
