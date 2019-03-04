@@ -15,146 +15,123 @@
         <main>
             <div>
                 <h2>Select difficulty:</h2>
-                    <div class="dropdown">
-                    <form name="selection">
-                    <button class="dropbtn">difficultySelector</button>
-                        <div class="dropdown-content">
-                        <a href="#difficulty" value="easy">easy</a>
-                        <a href="#difficulty" value="medium">medium</a>
-                        <a href="#difficulty" value="hard">hard</a>
-                    </div>
-                    </form>
-              </div>   
+                <form name="selection">
+                    <select id="difficultySelector">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <button type="button" id="generateButton" onclick="doAjax()">Go!</button>
+                </form>
             </div>
-
-            <form name="boardform">
-                <div class= "dropdown">
-                    <button onclick = "" id ="Box0">  
-                        <div class = "SmallSquare" id="box0.0" > </div>
-                        <div class = "SmallSquare" id="box0.1" > </div>
-                        <div class = "SmallSquare" id="box0.2" > </div>
-                        <div class = "SmallSquare" id="box0.3" > </div>
-                        <div class = "SmallSquare" id="box0.4" > </div>
-                        <div class = "SmallSquare" id="box0.5" > </div>
-                        <div class = "SmallSquare" id="box0.6" > </div>
-                        <div class = "SmallSquare" id="box0.7" > </div>
-                        <div class = "SmallSquare" id="box0.8" > </div>
+            <form id="sudokuForm">
+                
+                <div class= "Board" id="boardLayout">
+                    <div class = "BigSquare"id ="square0">  
+                        <input class= "cell_input" type="number" id="cell00" >
+                        <input class= "cell_input" type="number" id="cell01" > 
+                        <input class= "cell_input" type="number" id="cell02" > 
+                        <input class= "cell_input" type="number" id="cell03" > 
+                        <input class= "cell_input" type="number" id="cell04" > 
+                        <input class= "cell_input" type="number" id="cell05" > 
+                        <input class= "cell_input" type="number" id="cell06" > 
+                        <input class= "cell_input" type="number" id="cell07" > 
+                        <input class= "cell_input" type="number" id="cell08" > 
                     </div>
-
-                <div class= "dropdown">
-                    <button onclick = "" id ="Box1">  
-                        <div class = "SmallSquare" id="box1.0" > </div>
-                        <div class = "SmallSquare" id="box1.1" > </div>
-                        <div class = "SmallSquare" id="box1.2" > </div>
-                        <div class = "SmallSquare" id="box1.3" > </div>
-                        <div class = "SmallSquare" id="box1.4" > </div>
-                        <div class = "SmallSquare" id="box1.5" > </div>
-                        <div class = "SmallSquare" id="box1.6" > </div>
-                        <div class = "SmallSquare" id="box1.7" > </div>
-                        <div class = "SmallSquare" id="box1.8" > </div>
+                    <div class = "BigSquare" id ="square1">  
+                        <input class= "cell_input" type="number" id="cell10" > 
+                        <input class= "cell_input" type="number" id="cell11" > 
+                        <input class= "cell_input" type="number" id="cell12" > 
+                        <input class= "cell_input" type="number" id="cell13" > 
+                        <input class= "cell_input" type="number" id="cell14" > 
+                        <input class= "cell_input" type="number" id="cell15" > 
+                        <input class= "cell_input" type="number" id="cell16" > 
+                        <input class= "cell_input" type="number" id="cell17" > 
+                        <input class= "cell_input" type="number" id="cell18" > 
                     </div>
+                    <div class = "BigSquare"id ="square2">  
+                        <input class= "cell_input" type="number" id="cell20" > 
+                        <input class= "cell_input" type="number" id="cell21" > 
+                        <input class= "cell_input" type="number" id="cell22" > 
+                        <input class= "cell_input" type="number" id="cell23" > 
+                        <input class= "cell_input" type="number" id="cell24" > 
+                        <input class= "cell_input" type="number" id="cell25" > 
+                        <input class= "cell_input" type="number" id="cell26" > 
+                        <input class= "cell_input" type="number" id="cell27" > 
+                        <input class= "cell_input" type="number" id="cell28" > 
                     </div>
-                    <div class= "dropdown">
-                        <button onclick = "" id ="Box2">  
-                            <div class = "SmallSquare" id="box2.0" > </div>
-                            <div class = "SmallSquare" id="box2.1" > </div>
-                            <div class = "SmallSquare" id="box2.2" > </div>
-                            <div class = "SmallSquare" id="box2.3" > </div>
-                            <div class = "SmallSquare" id="box2.4" > </div>
-                            <div class = "SmallSquare" id="box2.5" > </div>
-                            <div class = "SmallSquare" id="box2.6" > </div>
-                            <div class = "SmallSquare" id="box2.7" > </div>
-                            <div class = "SmallSquare" id="box2.8" > </div>
-                        </div>
-                    <div class= "dropdown">
-                            <button onclick = "" id ="Box3">  
-                                <div class = "SmallSquare" id="box3.0" > </div>
-                                <div class = "SmallSquare" id="box3.1" > </div>
-                                <div class = "SmallSquare" id="box3.2" > </div>
-                                <div class = "SmallSquare" id="box3.3" > </div>
-                                <div class = "SmallSquare" id="box3.4" > </div>
-                                <div class = "SmallSquare" id="box3.5" > </div>
-                                <div class = "SmallSquare" id="box3.6" > </div>
-                                <div class = "SmallSquare" id="box3.7" > </div>
-                                <div class = "SmallSquare" id="box3.8" > </div>
-                        </div>
-                    <div class= "dropdown">
-                            <button onclick = "" id ="Box3">  
-                                <div class = "SmallSquare" id="box3.0" > </div>
-                                <div class = "SmallSquare" id="box3.1" > </div>
-                                <div class = "SmallSquare" id="box3.2" > </div>
-                                <div class = "SmallSquare" id="box3.3" > </div>
-                                <div class = "SmallSquare" id="box3.4" > </div>
-                                <div class = "SmallSquare" id="box3.5" > </div>
-                                <div class = "SmallSquare" id="box3.6" > </div>
-                                <div class = "SmallSquare" id="box3.7" > </div>
-                                <div class = "SmallSquare" id="box3.8" > </div>
-                        </div>
-                    <div class= "dropdown">
-                        <button onclick = "" id ="Box4">  
-                            <div class = "SmallSquare" id="box4.0" > </div>
-                            <div class = "SmallSquare" id="box4.1" > </div>
-                            <div class = "SmallSquare" id="box4.2" > </div>
-                            <div class = "SmallSquare" id="box4.3" > </div>
-                            <div class = "SmallSquare" id="box4.4" > </div>
-                            <div class = "SmallSquare" id="box4.5" > </div>
-                            <div class = "SmallSquare" id="box4.6" > </div>
-                            <div class = "SmallSquare" id="box4.7" > </div>
-                            <div class = "SmallSquare" id="box4.8" > </div>
+                    <div class = "BigSquare"id ="square3">  
+                        <input class= "cell_input" type="number" id="cell30" > 
+                        <input class= "cell_input" type="number" id="cell31" >
+                        <input class= "cell_input" type="number" id="cell32" > 
+                        <input class= "cell_input" type="number" id="cell33" > 
+                        <input class= "cell_input" type="number" id="cell34" > 
+                        <input class= "cell_input" type="number" id="cell35" > 
+                        <input class= "cell_input" type="number" id="cell36" > 
+                        <input class= "cell_input" type="number" id="cell37" > 
+                        <input class= "cell_input" type="number" id="cell38" >
                     </div>
-                    <div class= "dropdown">
-                        <button onclick = "" id ="Box5">  
-                            <div class = "SmallSquare" id="box5.0" > </div>
-                            <div class = "SmallSquare" id="box5.1" > </div>
-                            <div class = "SmallSquare" id="box5.2" > </div>
-                            <div class = "SmallSquare" id="box5.3" > </div>
-                            <div class = "SmallSquare" id="box5.4" > </div>
-                            <div class = "SmallSquare" id="box5.5" > </div>
-                            <div class = "SmallSquare" id="box5.6" > </div>
-                            <div class = "SmallSquare" id="box5.7" > </div>
-                            <div class = "SmallSquare" id="box5.8" > </div>
+                    <div class = "BigSquare"id ="square4">  
+                        <input class= "cell_input" type="number" id="cell40" >
+                        <input class= "cell_input" type="number" id="cell41" > 
+                        <input class= "cell_input" type="number" id="cell42" > 
+                        <input class= "cell_input" type="number" id="cell43" > 
+                        <input class= "cell_input" type="number" id="cell44" > 
+                        <input class= "cell_input" type="number" id="cell45" > 
+                        <input class= "cell_input" type="number" id="cell46" > 
+                        <input class= "cell_input" type="number" id="cell47" > 
+                        <input class= "cell_input" type="number" id="cell48" > 
                     </div>
-                    <div class= "dropdown">
-                        <button onclick = "" id ="Box6">  
-                            <div class = "SmallSquare" id="box6.0" > </div>
-                            <div class = "SmallSquare" id="box6.1" > </div>
-                            <div class = "SmallSquare" id="box6.2" > </div>
-                            <div class = "SmallSquare" id="box6.3" > </div>
-                            <div class = "SmallSquare" id="box6.4" > </div>
-                            <div class = "SmallSquare" id="box6.5" > </div>
-                            <div class = "SmallSquare" id="box6.6" > </div>
-                            <div class = "SmallSquare" id="box6.7" > </div>
-                            <div class = "SmallSquare" id="box6.8" > </div>
+                    <div class = "BigSquare"id ="square5">  
+                        <input class= "cell_input" type="number" id="cell50" >
+                        <input class= "cell_input" type="number" id="cell51" >
+                        <input class= "cell_input" type="number" id="cell52" >
+                        <input class= "cell_input" type="number" id="cell53" >
+                        <input class= "cell_input" type="number" id="cell54" >
+                        <input class= "cell_input" type="number" id="cell55" >
+                        <input class= "cell_input" type="number" id="cell56" > 
+                        <input class= "cell_input" type="number" id="cell57" >
+                        <input class= "cell_input" type="number" id="cell58" >
                     </div>
-                    <div class= "dropdown">
-                        <button onclick = "" id ="Box7">  
-                            <div class = "SmallSquare" id="box7.0" > </div>
-                            <div class = "SmallSquare" id="box7.1" > </div>
-                            <div class = "SmallSquare" id="box7.2" > </div>
-                            <div class = "SmallSquare" id="box7.3" > </div>
-                            <div class = "SmallSquare" id="box7.4" > </div>
-                            <div class = "SmallSquare" id="box7.5" > </div>
-                            <div class = "SmallSquare" id="box7.6" > </div>
-                            <div class = "SmallSquare" id="box7.7" > </div>
-                            <div class = "SmallSquare" id="box7.8" > </div>
+                    <div class = BigSquare id ="square6">  
+                        <input class= "cell_input" type="number" id="cell60" >
+                        <input class= "cell_input" type="number" id="cell61" >
+                        <input class= "cell_input" type="number" id="cell62" >
+                        <input class= "cell_input" type="number" id="cell63" >
+                        <input class= "cell_input" type="number" id="cell64" >
+                        <input class= "cell_input" type="number" id="cell65" > 
+                        <input class= "cell_input" type="number" id="cell66" > 
+                        <input class= "cell_input" type="number" id="cell67" > 
+                        <input class= "cell_input" type="number" id="cell68" > 
                     </div>
-                    <div class= "dropdown">
-                        <button onclick = "" id ="Box8">  
-                            <div class = "SmallSquare" id="box8.0" > </div>
-                            <div class = "SmallSquare" id="box8.1" > </div>
-                            <div class = "SmallSquare" id="box8.2" > </div>
-                            <div class = "SmallSquare" id="box8.3" > </div>
-                            <div class = "SmallSquare" id="box8.4" > </div>
-                            <div class = "SmallSquare" id="box8.5" > </div>
-                            <div class = "SmallSquare" id="box8.6" > </div>
-                            <div class = "SmallSquare" id="box8.7" > </div>
-                            <div class = "SmallSquare" id="box8.8" > </div>
+                    <div class = BigSquare id ="square7">  
+                        <input class= "cell_input" type="number" id="cell70" >
+                        <input class= "cell_input" type="number" id="cell71" >
+                        <input class= "cell_input" type="number" id="cell72" > 
+                        <input class= "cell_input" type="number" id="cell73" > 
+                        <input class= "cell_input" type="number" id="cell74" > 
+                        <input class= "cell_input" type="number" id="cell75" > 
+                        <input class= "cell_input" type="number" id="cell76" > 
+                        <input class= "cell_input" type="number" id="cell77" > 
+                        <input class= "cell_input" type="number" id="cell78" > 
+                    </div>
+                    <div class = "BigSquare"id ="square8">  
+                        <input class= "cell_input" type="number" id="cell80" > 
+                        <input class= "cell_input" type="number" id="cell81" > 
+                        <input class= "cell_input" type="number" id="cell82" > 
+                        <input class= "cell_input" type="number" id="cell83" > 
+                        <input class= "cell_input" type="number" id="cell84" > 
+                        <input class= "cell_input" type="number" id="cell85" > 
+                        <input class= "cell_input" type="number" id="cell86" >
+                        <input class= "cell_input" type="number" id="cell87" > 
+                        <input class= "cell_input" type="number" id="cell88" > 
                     </div>
                     
                 </div>
-                <p id="sudoku_id"> </p>
-                <button id="validateButton" onclick="validate_board()" >Validate!</button>
+                <p id="sudokuId"> </p>
             </form>
+            <button id="validateButton" onclick="validateBoard()" >Validate!</button>
+
         </main>
 
         <script src="app.js"></script>
