@@ -1,4 +1,4 @@
-div.fill {
+.fill {
     background-color: rgb(197, 197, 197);
     border-style: solid;
     border-width: 1px;
@@ -35,16 +35,16 @@ div.empty_cell{
 
 div.Board {
     border-style: solid;
-    border-width: 3px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    border-width: 3px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     height: 500px;
     width: 500px;
 }
 
 div.BigSquare {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     border-style: solid;
     border-width: 2px;  
 }
@@ -52,4 +52,13 @@ div.BigSquare {
 div.SmallSquare {
     border-style: solid;
     border-width: 1px;
+}
+
+
+.cell_input {
+    width: fill;
+}
+
+#sudokuForm {
+    display: grid;
 }

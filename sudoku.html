@@ -16,117 +16,121 @@
             <div>
                 <h2>Select difficulty:</h2>
                 <form name="selection">
-                    <input type="radio" name="difficulty" value="easy" checked>Easy<br>
-                    <input type="radio" name="difficulty" value="medium">Medium<br>
-                    <input type="radio" name="difficulty" value="hard">Hard<br>
+                    <select id="difficultySelector">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
                     <button type="button" id="generateButton" onclick="doAjax()">Go!</button>
                 </form>
             </div>
-            <form name="boardform">
+            <form id="sudokuForm">
+                
                 <div class= "Board" id="boardLayout">
                     <div class = "BigSquare"id ="square0">  
-                        <div class = "SmallSquare" id="square0.0" > </div>
-                        <div class = "SmallSquare" id="square0.1" > </div>
-                        <div class = "SmallSquare" id="square0.2" > </div>
-                        <div class = "SmallSquare" id="square0.3" > </div>
-                        <div class = "SmallSquare" id="square0.4" > </div>
-                        <div class = "SmallSquare" id="square0.5" > </div>
-                        <div class = "SmallSquare" id="square0.6" > </div>
-                        <div class = "SmallSquare" id="square0.7" > </div>
-                        <div class = "SmallSquare" id="square0.8" > </div>
+                        <input class= "cell_input" type="number" id="cell00" >
+                        <input class= "cell_input" type="number" id="cell01" > 
+                        <input class= "cell_input" type="number" id="cell02" > 
+                        <input class= "cell_input" type="number" id="cell03" > 
+                        <input class= "cell_input" type="number" id="cell04" > 
+                        <input class= "cell_input" type="number" id="cell05" > 
+                        <input class= "cell_input" type="number" id="cell06" > 
+                        <input class= "cell_input" type="number" id="cell07" > 
+                        <input class= "cell_input" type="number" id="cell08" > 
                     </div>
                     <div class = "BigSquare" id ="square1">  
-                        <div class = "SmallSquare" id="square1.0" > </div>
-                        <div class = "SmallSquare" id="square1.1" > </div>
-                        <div class = "SmallSquare" id="square1.2" > </div>
-                        <div class = "SmallSquare" id="square1.3" > </div>
-                        <div class = "SmallSquare" id="square1.4" > </div>
-                        <div class = "SmallSquare" id="square1.5" > </div>
-                        <div class = "SmallSquare" id="square1.6" > </div>
-                        <div class = "SmallSquare" id="square1.7" > </div>
-                        <div class = "SmallSquare" id="square1.8" > </div>
+                        <input class= "cell_input" type="number" id="cell10" > 
+                        <input class= "cell_input" type="number" id="cell11" > 
+                        <input class= "cell_input" type="number" id="cell12" > 
+                        <input class= "cell_input" type="number" id="cell13" > 
+                        <input class= "cell_input" type="number" id="cell14" > 
+                        <input class= "cell_input" type="number" id="cell15" > 
+                        <input class= "cell_input" type="number" id="cell16" > 
+                        <input class= "cell_input" type="number" id="cell17" > 
+                        <input class= "cell_input" type="number" id="cell18" > 
                     </div>
                     <div class = "BigSquare"id ="square2">  
-                        <div class = "SmallSquare" id="square2.0" > </div>
-                        <div class = "SmallSquare" id="square2.1" > </div>
-                        <div class = "SmallSquare" id="square2.2" > </div>
-                        <div class = "SmallSquare" id="square2.3" > </div>
-                        <div class = "SmallSquare" id="square2.4" > </div>
-                        <div class = "SmallSquare" id="square2.5" > </div>
-                        <div class = "SmallSquare" id="square2.6" > </div>
-                        <div class = "SmallSquare" id="square2.7" > </div>
-                        <div class = "SmallSquare" id="square2.8" > </div>
+                        <input class= "cell_input" type="number" id="cell20" > 
+                        <input class= "cell_input" type="number" id="cell21" > 
+                        <input class= "cell_input" type="number" id="cell22" > 
+                        <input class= "cell_input" type="number" id="cell23" > 
+                        <input class= "cell_input" type="number" id="cell24" > 
+                        <input class= "cell_input" type="number" id="cell25" > 
+                        <input class= "cell_input" type="number" id="cell26" > 
+                        <input class= "cell_input" type="number" id="cell27" > 
+                        <input class= "cell_input" type="number" id="cell28" > 
                     </div>
                     <div class = "BigSquare"id ="square3">  
-                        <div class = "SmallSquare" id="square3.0" > </div>
-                        <div class = "SmallSquare" id="square3.1" > </div>
-                        <div class = "SmallSquare" id="square3.2" > </div>
-                        <div class = "SmallSquare" id="square3.3" > </div>
-                        <div class = "SmallSquare" id="square3.4" > </div>
-                        <div class = "SmallSquare" id="square3.5" > </div>
-                        <div class = "SmallSquare" id="square3.6" > </div>
-                        <div class = "SmallSquare" id="square3.7" > </div>
-                        <div class = "SmallSquare" id="square3.8" > </div>
+                        <input class= "cell_input" type="number" id="cell30" > 
+                        <input class= "cell_input" type="number" id="cell31" >
+                        <input class= "cell_input" type="number" id="cell32" > 
+                        <input class= "cell_input" type="number" id="cell33" > 
+                        <input class= "cell_input" type="number" id="cell34" > 
+                        <input class= "cell_input" type="number" id="cell35" > 
+                        <input class= "cell_input" type="number" id="cell36" > 
+                        <input class= "cell_input" type="number" id="cell37" > 
+                        <input class= "cell_input" type="number" id="cell38" >
                     </div>
                     <div class = "BigSquare"id ="square4">  
-                        <div class = "SmallSquare" id="square4.0" > </div>
-                        <div class = "SmallSquare" id="square4.1" > </div>
-                        <div class = "SmallSquare" id="square4.2" > </div>
-                        <div class = "SmallSquare" id="square4.3" > </div>
-                        <div class = "SmallSquare" id="square4.4" > </div>
-                        <div class = "SmallSquare" id="square4.5" > </div>
-                        <div class = "SmallSquare" id="square4.6" > </div>
-                        <div class = "SmallSquare" id="square4.7" > </div>
-                        <div class = "SmallSquare" id="square4.8" > </div>
+                        <input class= "cell_input" type="number" id="cell40" >
+                        <input class= "cell_input" type="number" id="cell41" > 
+                        <input class= "cell_input" type="number" id="cell42" > 
+                        <input class= "cell_input" type="number" id="cell43" > 
+                        <input class= "cell_input" type="number" id="cell44" > 
+                        <input class= "cell_input" type="number" id="cell45" > 
+                        <input class= "cell_input" type="number" id="cell46" > 
+                        <input class= "cell_input" type="number" id="cell47" > 
+                        <input class= "cell_input" type="number" id="cell48" > 
                     </div>
                     <div class = "BigSquare"id ="square5">  
-                        <div class = "SmallSquare" id="square5.0" > </div>
-                        <div class = "SmallSquare" id="square5.1" > </div>
-                        <div class = "SmallSquare" id="square5.2" > </div>
-                        <div class = "SmallSquare" id="square5.3" > </div>
-                        <div class = "SmallSquare" id="square5.4" > </div>
-                        <div class = "SmallSquare" id="square5.5" > </div>
-                        <div class = "SmallSquare" id="square5.6" > </div>
-                        <div class = "SmallSquare" id="square5.7" > </div>
-                        <div class = "SmallSquare" id="square5.8" > </div>
+                        <input class= "cell_input" type="number" id="cell50" >
+                        <input class= "cell_input" type="number" id="cell51" >
+                        <input class= "cell_input" type="number" id="cell52" >
+                        <input class= "cell_input" type="number" id="cell53" >
+                        <input class= "cell_input" type="number" id="cell54" >
+                        <input class= "cell_input" type="number" id="cell55" >
+                        <input class= "cell_input" type="number" id="cell56" > 
+                        <input class= "cell_input" type="number" id="cell57" >
+                        <input class= "cell_input" type="number" id="cell58" >
                     </div>
                     <div class = BigSquare id ="square6">  
-                        <div class = "SmallSquare" id="square6.0" > </div>
-                        <div class = "SmallSquare" id="square6.1" > </div>
-                        <div class = "SmallSquare" id="square6.2" > </div>
-                        <div class = "SmallSquare" id="square6.3" > </div>
-                        <div class = "SmallSquare" id="square6.4" > </div>
-                        <div class = "SmallSquare" id="square6.5" > </div>
-                        <div class = "SmallSquare" id="square6.6" > </div>
-                        <div class = "SmallSquare" id="square6.7" > </div>
-                        <div class = "SmallSquare" id="square6.8" > </div>
+                        <input class= "cell_input" type="number" id="cell60" >
+                        <input class= "cell_input" type="number" id="cell61" >
+                        <input class= "cell_input" type="number" id="cell62" >
+                        <input class= "cell_input" type="number" id="cell63" >
+                        <input class= "cell_input" type="number" id="cell64" >
+                        <input class= "cell_input" type="number" id="cell65" > 
+                        <input class= "cell_input" type="number" id="cell66" > 
+                        <input class= "cell_input" type="number" id="cell67" > 
+                        <input class= "cell_input" type="number" id="cell68" > 
                     </div>
                     <div class = BigSquare id ="square7">  
-                        <div class = "SmallSquare" id="square7.0" > </div>
-                        <div class = "SmallSquare" id="square7.1" > </div>
-                        <div class = "SmallSquare" id="square7.2" > </div>
-                        <div class = "SmallSquare" id="square7.3" > </div>
-                        <div class = "SmallSquare" id="square7.4" > </div>
-                        <div class = "SmallSquare" id="square7.5" > </div>
-                        <div class = "SmallSquare" id="square7.6" > </div>
-                        <div class = "SmallSquare" id="square7.7" > </div>
-                        <div class = "SmallSquare" id="square7.8" > </div>
+                        <input class= "cell_input" type="number" id="cell70" >
+                        <input class= "cell_input" type="number" id="cell71" >
+                        <input class= "cell_input" type="number" id="cell72" > 
+                        <input class= "cell_input" type="number" id="cell73" > 
+                        <input class= "cell_input" type="number" id="cell74" > 
+                        <input class= "cell_input" type="number" id="cell75" > 
+                        <input class= "cell_input" type="number" id="cell76" > 
+                        <input class= "cell_input" type="number" id="cell77" > 
+                        <input class= "cell_input" type="number" id="cell78" > 
                     </div>
                     <div class = "BigSquare"id ="square8">  
-                        <div class = "SmallSquare" id="square8.0" > </div>
-                        <div class = "SmallSquare" id="square8.1" > </div>
-                        <div class = "SmallSquare" id="square8.2" > </div>
-                        <div class = "SmallSquare" id="square8.3" > </div>
-                        <div class = "SmallSquare" id="square8.4" > </div>
-                        <div class = "SmallSquare" id="square8.5" > </div>
-                        <div class = "SmallSquare" id="square8.6" > </div>
-                        <div class = "SmallSquare" id="square8.7" > </div>
-                        <div class = "SmallSquare" id="square8.8" > </div>
+                        <input class= "cell_input" type="number" id="cell80" > 
+                        <input class= "cell_input" type="number" id="cell81" > 
+                        <input class= "cell_input" type="number" id="cell82" > 
+                        <input class= "cell_input" type="number" id="cell83" > 
+                        <input class= "cell_input" type="number" id="cell84" > 
+                        <input class= "cell_input" type="number" id="cell85" > 
+                        <input class= "cell_input" type="number" id="cell86" >
+                        <input class= "cell_input" type="number" id="cell87" > 
+                        <input class= "cell_input" type="number" id="cell88" > 
                     </div>
                 </div>
-                <p id="sudoku_id"> </p>
-                <button id="validateButton" onclick="validate_board()" >Validate!</button>
+                <p id="sudokuId"> </p>
             </form>
+            <button id="validateButton" onclick="validateBoard()" >Validate!</button>
+
         </main>
 
         <script src="app.js"></script>
