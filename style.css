@@ -55,8 +55,10 @@ div.SmallSquare {
 }
 
 
-.cell_input {
+.cell_input.disabled {
     width: fill;
+    display: block;
+    
 }
 
 #sudokuForm {

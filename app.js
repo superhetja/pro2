@@ -31,6 +31,7 @@ function printBoard(board, sudokuid) {
             if (board[i][n] != "."){
                 document.getElementById(name).className = "fill";
                 document.getElementById(name).value = board[i][n];
+                document.getElementById(name).disabled = true;
             } else {
                 document.getElementById(name).className = "input_field";
             }
